@@ -11,7 +11,7 @@ struct ContentView: View {
     var body: some View {
         Text("Weekly Forecast").foregroundStyle(Color.blue).font(.system(size: 32, weight: .black, design: .rounded))
         ScrollView(.horizontal) {
-            HStack {
+            HStack(spacing: 24) {
                 DayForecast(day: "Mon", isRainy: false, high: 70, low: 50)
                 
                 DayForecast(day: "Tue", isRainy: true, high: 60, low: 40)
@@ -21,7 +21,7 @@ struct ContentView: View {
                 DayForecast(day: "Thu", isRainy: true, high: 45, low: 35)
                 
                 DayForecast(day: "Fri", isRainy: false, high: 60, low: 40)
-            }
+            }.padding(24)
         }
     }
 }
